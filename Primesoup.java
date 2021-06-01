@@ -1,5 +1,11 @@
 import java.util.ArrayList;
 
+/*
+Prints a list of all prime numbers from zero up to one-million.
+Purposely made without the use of square root functions. However, due to not using square roots, (and possibly not being as good as I could be at coding),
+the list is most likely not 100% accurate. Just randomly checking primes against a list of known prime numbers would sometimes show I also had integers that were
+squares of other prime numbers. I could be wrong..
+*/
 public class Primesoup {
 
 
