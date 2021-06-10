@@ -96,6 +96,12 @@ public class DNA {
 
     return filterString;
   }
+                                     
+  
+  /* 
+  The analyse method will iterate through the given DNA sequence and output all strings of protein sequences that begin with a start codon
+  and end with a stop codon. 3 different reading frames are produced at the same time, and each can be accessed through the proteinSynthesis method.
+  */
 
   public void analyse() {
 
@@ -160,6 +166,11 @@ public class DNA {
 
   }
 
+  /* 
+  This method will return a protein sequence array with all of the proteins found in the given raw DNA code.
+  The reading frames are called with either a "0", "1", or "2". The "0" being the standard 5'-3' reading frame; "1" being the amino acid over as the start
+  of the reading frame; "2" being the next reading frame after that.
+  */
 
   public String proteinSynthesis(int num) {
     switch(num) {
@@ -186,6 +197,8 @@ public class DNA {
 
 
   public static void main(String[] args) {
+    
+    // THIS IS A TEST DATABASE CODE FOR A SCAN OF COVID-19
     
     String covid01 = new String("""
     1 attaaaggtt tataccttcc caggtaacaa accaaccaac tttcgatctc ttgtagatct
@@ -692,11 +705,15 @@ public class DNA {
     DNA test = new DNA(covid01);
 
     test.analyse();
-
+    
+    // *********************************************
     // String proteinSq = test.proteinSynthesis(1);
-
     // System.out.println(proteinSq);
-
+    // *********************************************
+                                
+    // When running the file from terminal, the main method takes an argument in the form of
+    // an integer from 0 to 2. This number is input after the filename;
+    // ie;     java DNA 0         or              java DNA 1             or               java DNA 2
     String a = new String(args[0]);
     int b = Integer.parseInt(a);
 
